@@ -1,0 +1,148 @@
+body {
+    background-color: #96A8C8;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+}
+
+header {
+    background-color: white;
+    margin: 20px auto;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: -30px 20px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: bounceIn 1s ease-out; 
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: rgb(0, 0, 0);
+    text-shadow: -5px 5px 6px rgba(0, 0, 0, 0.8); 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header h1:hover {
+    color: #05add3; 
+    transform: rotate(3deg);
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    text-shadow: -5px 5px 6px rgba(0, 0, 0, 0.5); 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header p:hover {
+    color: #05add3; 
+    transform: rotate(-3deg);
+}
+
+
+@keyframes bounceIn {
+    0% { transform: translateY(-20px); opacity: 0; }
+    50% { transform: translateY(10px); opacity: 1; }
+    100% { transform: translateY(0); }
+}
+
+
+main {
+    background-color: white;
+    color: black;
+    margin: 20px auto;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -30px 20px 20px rgba(0, 0, 0, 0.5);
+    animation: bounceIn 1s ease-out; 
+}
+
+main h2 {
+    text-shadow: -3px 3px 6px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+main h2:hover {
+    color: #05add3; 
+    transform: translateY(-10px); 
+}
+
+footer {
+    background-color: white;
+    margin: 20px auto;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    text-shadow: -5px 5px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: -30px 20px 20px rgba(0, 0, 0, 0.5);
+    animation: bounceIn 1s ease-out; 
+
+}
+
+li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
+}
+
+h1, h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+time {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+figure {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+figcaption, img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
+    color: blue; 
+}
+
+a:hover {
+    color: lightblue;
+    cursor: pointer;
+}
