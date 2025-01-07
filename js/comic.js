@@ -86,18 +86,23 @@ function appendComic(data){
     dateElement.textContent = `Published: ${comicDate.toLocaleDateString()}`;
     dateElement.style.fontWeight = 'bold'; // Ger fetstil för synlighet
     comicDiv.appendChild(dateElement);
-    
+
+    // Skapa figure-element för att innehålla bilden och alt-texten
+    const figure = document.createElement('figure');
+
     //Skapa och lägg till comic image
     const img = document.createElement('img');
     img.src = data.img;
-    img.alt = data.alt;
-    comicDiv.appendChild(img);
+    img.alt = `${data.alt} (Comic #${data.num})`; // Lägg till comic-numret i alt-texten
+    figure.appendChild(img);
     
     //Skapa och lägg till comic alt-text som bildbeskrivning
-    const altText = document.createElement('p');
-    altText.textContent = `${data.alt} (Comic #${data.num})`;
-    altText.style.fontStyle = 'italic';
-    comicDiv.appendChild(altText);
+    const figcatption = document.createElement('figcaption');
+    figcatption.textContent = `${data.alt} (Comic #${data.num})`;
+    figcatption.style.fontStyle = 'italic';
+    figure.appendChild(figcatption);
+
+    comicDiv.appendChild(figure);
 
     //Uppdatera currentComic
     currentComic = data.num;

@@ -119,16 +119,20 @@ p {
     margin-top: 5px;
 }
 
+/* Style för figure och dess innehåll */
 figure {
-    width: 60%;
-    display: block;
-    margin: auto;
-}
-
-figcaption, img {
     width: 100%;
     display: block;
     margin: auto;
+    text-align: center; /* För att säkerställa att allt är centrerat */
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 1em;
+    color: black;
+    margin-top: 10px;
+    text-align: center;
 }
 
 ul {
