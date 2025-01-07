@@ -80,6 +80,13 @@ function appendComic(data){
     title.textContent = data.title;
     comicDiv.appendChild(title);
 
+    // Skapa och formatera publiceringsdatum
+    const dateElement = document.createElement('p');
+    const comicDate = new Date(data.year, data.month - 1, data.day); // Skapar Date-objekt
+    dateElement.textContent = `Published: ${comicDate.toLocaleDateString()}`;
+    dateElement.style.fontWeight = 'bold'; // Ger fetstil för synlighet
+    comicDiv.appendChild(dateElement);
+    
     //Skapa och lägg till comic image
     const img = document.createElement('img');
     img.src = data.img;
@@ -88,7 +95,7 @@ function appendComic(data){
     
     //Skapa och lägg till comic alt-text som bildbeskrivning
     const altText = document.createElement('p');
-    altText.textContent = data.alt;
+    altText.textContent = `${data.alt} (Comic #${data.num})`;
     altText.style.fontStyle = 'italic';
     comicDiv.appendChild(altText);
 
